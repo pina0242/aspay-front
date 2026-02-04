@@ -1,0 +1,56 @@
+/* src/styles/Ejecarch.css */
+
+/* Contenedor para los mensajes de estado y el botón */
+.ejecarch-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 200px;
+    padding: 20px;
+}
+
+/* Estilo para el mensaje de carga */
+.loading-message {
+    color: #007bff;
+    font-size: 1.5em; /* Tamaño de letra más grande pero no exagerado */
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite; /* Animación simple para dar efecto de carga */
+}
+
+/* Animación para el mensaje de carga */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Estilo para los mensajes de éxito/error */
+.success-message,
+.error-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para el botón de volver */
+.ejecarch-button-container {
+    margin-top: 20px;
+}
+
+/* Estilo para el botón de volver */
+.ejecarch-button-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ejecarch-button-container button:hover {
+    background-color: #e0e0e0;
+}

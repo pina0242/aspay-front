@@ -1,0 +1,55 @@
+/* Estilos para el nuevo componente Selproej */
+
+.progress-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px; /* Centrar texto verticalmente */
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-status {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.consultar-btn {
+    padding: 10px 20px;
+    background-color: #565e68ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consultar-btn:hover:not(:disabled) {
+    background-color: #3f4751;
+}
+
+.consultar-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

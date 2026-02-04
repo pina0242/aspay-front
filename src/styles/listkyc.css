@@ -1,0 +1,204 @@
+.listkyc-content-container {
+  padding: 24px;
+  max-width: 1400px; /* Ancho máximo mayor para acomodar más columnas */
+  margin: auto;
+}
+
+.listkyc-title {
+  text-align: center;
+  font-size: 2em;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+.listkyc-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listkyc-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listkyc-form label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.listkyc-form input[type="number"],
+.listkyc-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+.listkyc-form button {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.listkyc-form button:hover {
+  background-color: #357bd8;
+}
+
+/* Estilos específicos para la tabla de KYC */
+.kyc-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.kyc-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px; /* Ancho mínimo para acomodar todas las columnas */
+}
+
+.kyc-table thead {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
+}
+
+.kyc-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-right: 1px solid #e0e0e0;
+}
+
+.kyc-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  border-right: 1px solid #f0f0f0;
+}
+
+.kyc-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilos específicos para columnas - haz las demás más compactas */
+.kyc-table th:nth-child(1),  /* ID */
+.kyc-table td:nth-child(1) { 
+  min-width: 80px;
+  max-width: 100px;
+}
+
+.kyc-table th:nth-child(2),  /* Edad */
+.kyc-table td:nth-child(2) { 
+  min-width: 60px;
+  max-width: 80px;
+}
+
+.kyc-table th:nth-child(3),  /* Riesgo Geog */
+.kyc-table td:nth-child(3),
+.kyc-table th:nth-child(4),  /* Riesgo Edad */
+.kyc-table td:nth-child(4),
+.kyc-table th:nth-child(5),  /* Riesgo Total */
+.kyc-table td:nth-child(5) { 
+  min-width: 100px;
+  max-width: 120px;
+}
+
+/* Columnas de puntuación y calificación FICO */
+.kyc-table th:nth-child(6),  /* Puntuacion Fico */
+.kyc-table td:nth-child(6),
+.kyc-table th:nth-child(7),  /* Calif Fico */
+.kyc-table td:nth-child(7) { 
+  min-width: 110px;
+  max-width: 130px;
+}
+
+/* Columnas de transacciones - hacerlas compactas */
+.kyc-table th:nth-child(n+8):nth-child(-n+15),  /* Columnas 8-15 */
+.kyc-table td:nth-child(n+8):nth-child(-n+15) { 
+  min-width: 90px;
+  max-width: 120px;
+  font-size: 0.9em;
+}
+
+/* COLUMNA ESPECIAL: Razón Resultado - MÁS AMPLIA */
+.kyc-table th:nth-child(16),  /* Razon Resultado - header */
+.kyc-table td:nth-child(16) { /* Razon Resultado - celda */
+  min-width: 300px !important;
+  max-width: 400px !important;
+  width: 350px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+  background-color: #fafafa;
+}
+
+/* Columnas restantes */
+.kyc-table th:nth-child(n+17),  /* Columnas 17 en adelante */
+.kyc-table td:nth-child(n+17) { 
+  min-width: 120px;
+  max-width: 150px;
+}
+
+/* Columna de acciones */
+.kyc-table th:last-child,
+.kyc-table td:last-child {
+  min-width: 80px;
+  max-width: 100px;
+  text-align: center;
+}
+
+/* Botones de acción */
+.kyc-actions-cell {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.kyc-delete-btn {
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.kyc-delete-btn:hover {
+  background-color: #c53030;
+}
+
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #fed7d7;
+  border-radius: 4px;
+  border: 1px solid #feb2b2;
+}

@@ -1,0 +1,168 @@
+.listusr-content-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.listusr-title {
+  text-align: center;
+  font-size: 2em;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+.listusr-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listusr-form label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.listusr-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+.listusr-form button {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.listusr-form button:hover {
+  background-color: #357bd8;
+}
+
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.user-grid-container {
+  margin-top: 40px;
+}
+
+.grid-title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #2d3748;
+  margin-bottom: 25px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #4a90e2;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-card p {
+  margin: 8px 0;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.user-card p strong {
+  color: #2d3748;
+}
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+  margin-top: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse; /* Asegura que las celdas se toquen entre sí */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.user-table thead {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
+}
+
+.user-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+
+.edit-btn,
+.delete-btn {
+  /* Elimina el padding o redúcelo */
+  padding: 8px; /* Ejemplo de padding reducido */
+  width: 40px; /* Ancho fijo para botones cuadrados */
+  height: 40px; /* Altura fija para botones cuadrados */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.scrollable-cell-header {
+  min-width: 250px; /* Ancho mínimo para la columna */
+}
+
+.scrollable-cell {
+  max-width: 300px; /* Define el ancho máximo de la celda */
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  white-space: nowrap; /* Evita que el texto se salte de línea */
+}

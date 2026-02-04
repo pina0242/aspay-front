@@ -1,0 +1,457 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --wwwsilk-paycom-athens-gray: #f2f4f7;
+  --wwwsilk-paycom-black: #000000;
+  --wwwsilk-paycom-cod-gray: #0b0b0b;
+  --wwwsilk-paycom-cod-gray: #181818;
+  --wwwsilk-paycom-crimson: #c8102e;
+  --wwwsilk-paycom-delta: #a3a3a0;
+  --wwwsilk-paycom-emperor: #525252;
+  --wwwsilk-paycom-dusty-gray: #999999;
+  --wwwsilk-paycom-medium-purple: #7f56d9;
+  --wwwsilk-paycom-mercury: #e5e5e5;
+  --wwwsilk-paycom-midnight-blue: #012169;
+  --wwwsilk-paycom-heliotrope: #bc8fff;
+  --wwwsilk-paycom-mountain-meadow: #27d045;
+  --wwwsilk-paycom-mine-shaft: #292929;
+  --wwwsilk-paycom-royal-blue: #345ae0;
+  --wwwsilk-paycom-white: #ffffff;
+  --frontfp-df5a04b328eeherokuappcom-black-125: rgba(0, 0, 0, 0.12);
+  --frontfp-df5a04b328eeherokuappcom-mine-shaft: #333333;
+  --frontfp-df5a04b328eeherokuappcom-spring-wood: #f2eee3;
+  --frontfp-df5a04b328eeherokuappcom-white-athens-gray: linear-gradient(
+      to left,
+      #f8f9fa,
+      #f8f9fa
+    ),
+    linear-gradient(to left, #ffffff, #ffffff);
+  --frontfp-df5a04b328eeherokuappcom-azure-radiance: #007bff;
+  --frontfp-df5a04b328eeherokuappcom-black-20: rgba(0, 0, 0, 0.2);
+  --frontfp-df5a04b328eeherokuappcom-limed-spruce: #314249;
+  --localhost-alto: #e0e0e0;
+  --localhost-athens-gray: #f0f2f5;
+  --localhost-boulder: #757575;
+  --localhost-cloud-burst: #213547;
+  --localhost-dodger-blue: #2196f3;
+  --localhost-dove-gray: #666666;
+  --localhost-international-orange: #ff5a00;
+  --localhost-malibu: #61dafb;
+  --localhost-shark: #282c34;
+  --frontend-sigevi-developbanobrasgobmx-alabaster: #f9f9f9;
+  --frontend-sigevi-developbanobrasgobmx-alto: #dddddd;
+  --frontend-sigevi-developbanobrasgobmx-cape-cod: #393c3e;
+  --frontend-sigevi-developbanobrasgobmx-claret: #611232;
+  --frontend-sigevi-developbanobrasgobmx-emerald: #29ce42;
+  --frontend-sigevi-developbanobrasgobmx-emperor: #545454;
+  --frontend-sigevi-developbanobrasgobmx-luxor-gold: #a57f2c;
+  --frontend-sigevi-developbanobrasgobmx-mercury: #e8e8e8;
+  --frontend-sigevi-developbanobrasgobmx-mexican-red: #9f2141;
+  --frontend-sigevi-developbanobrasgobmx-muddy-waters: #b38e5d;
+  --frontend-sigevi-developbanobrasgobmx-pale-sky: #6c757d;
+  --frontend-sigevi-developbanobrasgobmx-plantation: #245b4e;
+  --frontend-sigevi-developbanobrasgobmx-shark: #212529;
+  --frontend-sigevi-developbanobrasgobmx-ship-gray: #404041;
+  --frontend-sigevi-developbanobrasgobmx-silver: #cccccc;
+  --frontend-sigevi-developbanobrasgobmx-silver-chalice: #afafaf;
+  --frontend-sigevi-developbanobrasgobmx-white-white: linear-gradient(
+      to left,
+      #ffffff,
+      #ffffff
+    ),
+    linear-gradient(to left, #ffffff, #ffffff);
+
+  /* Fonts */
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 50.9765625px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 62.64px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 51.76953125px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 62.64px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 51.99609375px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 62.64px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 52.22265625px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 62.64px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 53.35546875px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 62.64px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-2-font-family: Arial-Black, sans-serif;
+  --wwwsilk-paycom-semantic-heading-2-font-size: 71.4296875px;
+  --wwwsilk-paycom-semantic-heading-2-line-height: 88.56px;
+  --wwwsilk-paycom-semantic-heading-2-font-weight: 900;
+  --wwwsilk-paycom-semantic-heading-2-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 22.4609375px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 23.046875px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 23.2421875px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 23.4375px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 23.828125px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 31.125px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-heading-3-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-heading-3-font-size: 31.625px;
+  --wwwsilk-paycom-semantic-heading-3-line-height: 30px;
+  --wwwsilk-paycom-semantic-heading-3-font-weight: 700;
+  --wwwsilk-paycom-semantic-heading-3-font-style: normal;
+  --wwwsilk-paycom-semantic-input-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-input-font-size: 12.6875px;
+  --wwwsilk-paycom-semantic-input-line-height: normal;
+  --wwwsilk-paycom-semantic-input-font-weight: 700;
+  --wwwsilk-paycom-semantic-input-font-style: normal;
+  --wwwsilk-paycom-semantic-input-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-input-font-size: 15.671875px;
+  --wwwsilk-paycom-semantic-input-line-height: 11px;
+  --wwwsilk-paycom-semantic-input-font-weight: 700;
+  --wwwsilk-paycom-semantic-input-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: Arial-Narrow, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 14px;
+  --wwwsilk-paycom-semantic-link-line-height: 20px;
+  --wwwsilk-paycom-semantic-link-font-weight: 400;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 14.75px;
+  --wwwsilk-paycom-semantic-link-line-height: 24px;
+  --wwwsilk-paycom-semantic-link-font-weight: 700;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 14.875px;
+  --wwwsilk-paycom-semantic-link-line-height: 24px;
+  --wwwsilk-paycom-semantic-link-font-weight: 700;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 15px;
+  --wwwsilk-paycom-semantic-link-line-height: 24px;
+  --wwwsilk-paycom-semantic-link-font-weight: 700;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: Arial-Narrow, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 20px;
+  --wwwsilk-paycom-semantic-link-line-height: 30px;
+  --wwwsilk-paycom-semantic-link-font-weight: 400;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: SegoeUi-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 16.100000381469727px;
+  --wwwsilk-paycom-semantic-link-line-height: 20px;
+  --wwwsilk-paycom-semantic-link-font-weight: 700;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-semantic-link-font-family: SegoeUi-Bold, sans-serif;
+  --wwwsilk-paycom-semantic-link-font-size: 17px;
+  --wwwsilk-paycom-semantic-link-line-height: 20px;
+  --wwwsilk-paycom-semantic-link-font-weight: 700;
+  --wwwsilk-paycom-semantic-link-font-style: normal;
+  --wwwsilk-paycom-arial-narrow-font-family: Arial-Narrow, sans-serif;
+  --wwwsilk-paycom-arial-narrow-font-size: 20px;
+  --wwwsilk-paycom-arial-narrow-line-height: 30px;
+  --wwwsilk-paycom-arial-narrow-font-weight: 400;
+  --wwwsilk-paycom-arial-narrow-font-style: normal;
+  --wwwsilk-paycom-arial-bold-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-arial-bold-font-size: 21.75px;
+  --wwwsilk-paycom-arial-bold-line-height: 36px;
+  --wwwsilk-paycom-arial-bold-font-weight: 700;
+  --wwwsilk-paycom-arial-bold-font-style: normal;
+  --wwwsilk-paycom-arial-bold-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-arial-bold-font-size: 21.9375px;
+  --wwwsilk-paycom-arial-bold-line-height: 36px;
+  --wwwsilk-paycom-arial-bold-font-weight: 700;
+  --wwwsilk-paycom-arial-bold-font-style: normal;
+  --wwwsilk-paycom-arial-bold-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-arial-bold-font-size: 22.125px;
+  --wwwsilk-paycom-arial-bold-line-height: 36px;
+  --wwwsilk-paycom-arial-bold-font-weight: 700;
+  --wwwsilk-paycom-arial-bold-font-style: normal;
+  --wwwsilk-paycom-arial-narrow-font-family: Arial-Narrow, sans-serif;
+  --wwwsilk-paycom-arial-narrow-font-size: 14px;
+  --wwwsilk-paycom-arial-narrow-line-height: 20px;
+  --wwwsilk-paycom-arial-narrow-font-weight: 400;
+  --wwwsilk-paycom-arial-narrow-font-style: normal;
+  --wwwsilk-paycom-arial-bold-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-arial-bold-font-size: 15.671875px;
+  --wwwsilk-paycom-arial-bold-line-height: 20px;
+  --wwwsilk-paycom-arial-bold-font-weight: 700;
+  --wwwsilk-paycom-arial-bold-font-style: normal;
+  --wwwsilk-paycom-arial-bold-font-family: Arial-Bold, sans-serif;
+  --wwwsilk-paycom-arial-bold-font-size: 15.5390625px;
+  --wwwsilk-paycom-arial-bold-line-height: 20px;
+  --wwwsilk-paycom-arial-bold-font-weight: 700;
+  --wwwsilk-paycom-arial-bold-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-family: Roboto-Regular,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-size: 16px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-line-height: 24px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-semantic-small-font-family: Roboto-Regular,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-semantic-small-font-size: 12.800000190734863px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-small-line-height: 19.2px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-small-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-semantic-small-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-family: Arial-Narrow,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-size: 16px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-line-height: 24px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-family: Arial-Narrow,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-size: 16px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-line-height: 28.8px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-family: FontAwesome5Free-Solid,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-size: 16px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-line-height: 16px;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-semantic-link-font-style: normal;
+  --frontfp-df5a04b328eeherokuappcom-arial-narrow-font-family: Arial-Narrow,
+    sans-serif;
+  --frontfp-df5a04b328eeherokuappcom-arial-narrow-font-size: 16px;
+  --frontfp-df5a04b328eeherokuappcom-arial-narrow-line-height: 28.8px;
+  --frontfp-df5a04b328eeherokuappcom-arial-narrow-font-weight: 400;
+  --frontfp-df5a04b328eeherokuappcom-arial-narrow-font-style: normal;
+  --localhost-semantic-button-font-family: Inter-Bold, sans-serif;
+  --localhost-semantic-button-font-size: 16px;
+  --localhost-semantic-button-line-height: normal;
+  --localhost-semantic-button-font-weight: 700;
+  --localhost-semantic-button-font-style: normal;
+  --localhost-semantic-button-font-family: Inter-Medium, sans-serif;
+  --localhost-semantic-button-font-size: 24px;
+  --localhost-semantic-button-line-height: normal;
+  --localhost-semantic-button-font-weight: 500;
+  --localhost-semantic-button-font-style: normal;
+  --localhost-semantic-button-font-family: SegoeUiEmoji-Regular, sans-serif;
+  --localhost-semantic-button-font-size: 24px;
+  --localhost-semantic-button-line-height: normal;
+  --localhost-semantic-button-font-weight: 400;
+  --localhost-semantic-button-font-style: normal;
+  --localhost-semantic-heading-1-font-family: Inter-Bold, sans-serif;
+  --localhost-semantic-heading-1-font-size: 40px;
+  --localhost-semantic-heading-1-line-height: 44px;
+  --localhost-semantic-heading-1-font-weight: 700;
+  --localhost-semantic-heading-1-font-style: normal;
+  --localhost-semantic-heading-1-font-family: Inter-Bold, sans-serif;
+  --localhost-semantic-heading-1-font-size: 51.20000076293945px;
+  --localhost-semantic-heading-1-line-height: 56.32px;
+  --localhost-semantic-heading-1-font-weight: 700;
+  --localhost-semantic-heading-1-font-style: normal;
+  --localhost-semantic-input-font-family: Arial-Narrow, sans-serif;
+  --localhost-semantic-input-font-size: 13.300000190734863px;
+  --localhost-semantic-input-line-height: normal;
+  --localhost-semantic-input-font-weight: 400;
+  --localhost-semantic-input-font-style: normal;
+  --localhost-semantic-item-font-family: SegoeUiEmoji-Regular, sans-serif;
+  --localhost-semantic-item-font-size: 16px;
+  --localhost-semantic-item-line-height: 24px;
+  --localhost-semantic-item-font-weight: 400;
+  --localhost-semantic-item-font-style: normal;
+  --localhost-inter-regular-font-family: Inter-Regular, sans-serif;
+  --localhost-inter-regular-font-size: 19.200000762939453px;
+  --localhost-inter-regular-line-height: 30.72px;
+  --localhost-inter-regular-font-weight: 400;
+  --localhost-inter-regular-font-style: normal;
+  --localhost-inter-regular-font-family: Inter-Regular, sans-serif;
+  --localhost-inter-regular-font-size: 14.399999618530273px;
+  --localhost-inter-regular-line-height: 21.6px;
+  --localhost-inter-regular-font-weight: 400;
+  --localhost-inter-regular-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-button-font-family: NotoSans-DisplayLight,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-button-font-size: 18px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-button-line-height: 25.71px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-button-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-button-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-cell-font-family: NotoSans-Bold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-cell-font-size: 14px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-cell-line-height: 20px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-cell-font-weight: 700;
+  --frontend-sigevi-developbanobrasgobmx-semantic-cell-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-data-font-family: NotoSans-DisplayLight,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-data-font-size: 14px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-data-line-height: 20px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-data-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-data-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-1-font-family: Arial-Narrow,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-1-font-size: 35px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-1-line-height: 42px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-1-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-1-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-3-font-family: Arial-Narrow,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-3-font-size: 14px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-3-line-height: 16.8px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-3-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-3-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-5-font-family: NotoSans-DisplaySemiBold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-5-font-size: 18px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-5-line-height: 19.8px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-5-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-heading-5-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-family: NotoSans-DisplayLight,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-size: 18px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-line-height: 25.71px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-family: NotoSans-Bold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-size: 18px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-line-height: 25.71px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-weight: 700;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-family: TimesNewRoman-Bold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-size: 10px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-line-height: 14.29px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-weight: 700;
+  --frontend-sigevi-developbanobrasgobmx-semantic-item-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-family: NotoSans-DisplayLight,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-size: 13px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-line-height: 25px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-family: NotoSans-DisplayThin,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-size: 15.25px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-line-height: 13.6px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-family: NotoSans-DisplayThin,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-size: 16px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-line-height: 13.6px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-family: NotoSans-Bold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-size: 16px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-line-height: 40px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-weight: 700;
+  --frontend-sigevi-developbanobrasgobmx-semantic-link-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-family: NotoSans-DisplayLight,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-size: 14px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-line-height: 20px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-family: NotoSans-Bold,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-size: 14px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-line-height: 20px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-weight: 700;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-font-style: normal;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-upper-font-family: Arial-Narrow,
+    sans-serif;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-upper-font-size: 15px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-upper-line-height: 18px;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-upper-font-weight: 400;
+  --frontend-sigevi-developbanobrasgobmx-semantic-strong-upper-font-style: normal;
+
+  /* Effects */
+}
+/* Figma Color Variables of your File */
+[data-wwwsilk-paycom-mode="mode-1"] {
+  /* mode-1 */
+  --color-white-solid: #ffffff;
+  --color-grey-4: #0b0b0b;
+  --color-black-solid: #000000;
+  --color-grey-60: #999999;
+  --color-violet-78: #bc8fff;
+  --color-grey-63: #a3a3a0;
+  --color-grey-16: #292929;
+  --color-grey-32: #525252;
+  --color-violet-59: #7f56d9;
+  --color-grey-90: #e5e5e5;
+  --color-grey-96: #f2f4f7;
+  --color-blue-54: #345ae0;
+  --color-grey-9: #181818;
+  --color-azure-21: #012169;
+  --color-red-42: #c8102e;
+  --color-green-48: #27d045;
+}
+
+[data-frontfp-df5a04b328eeherokuappcom-mode="mode-1"] {
+  /* mode-1 */
+  --color-white-solid: #ffffff;
+  --color-black-solid: #000000;
+  --color-azure-50: #007bff;
+  --color-azure-24: #314249;
+  --color-black-20: rgba(0, 0, 0, 0.2);
+  --color-grey-98: #f8f9fa;
+  --color-grey-20: #333333;
+  --color-black-125: rgba(0, 0, 0, 0.12);
+  --color-grey-92: #f2eee3;
+}
+
+[data-localhost-mode="mode-1"] {
+  /* mode-1 */
+  --color-white-solid: #ffffff;
+  --color-azure-18: #282c34;
+  --color-cyan-68: #61dafb;
+  --color-grey-46: #757575;
+  --color-azure-54: #2196f3;
+  --color-azure-20: #213547;
+  --color-grey-40: #666666;
+  --color-grey-95: #f0f2f5;
+  --color-grey-88: #e0e0e0;
+  --color-orange-50: #ff5a00;
+}
+
+[data-frontend-sigevi-developbanobrasgobmx-mode="mode-1"] {
+  /* mode-1 */
+  --color-white-solid: #ffffff;
+  --color-grey-23: #393c3e;
+  --color-grey-33: #545454;
+  --color-grey-25: #404041;
+  --color-grey-46: #6c757d;
+  --color-grey-91: #e8e8e8;
+  --color-orange-53: #b38e5d;
+  --color-grey-98: #f9f9f9;
+  --color-grey-80: #cccccc;
+  --color-rose-23: #611232;
+  --color-rose-38: #9f2141;
+  --color-grey-87: #dddddd;
+  --color-azure-15: #212529;
+  --color-green-48: #29ce42;
+  --color-cyan-25: #245b4e;
+  --color-orange-41: #a57f2c;
+  --color-grey-69: #afafaf;
+}

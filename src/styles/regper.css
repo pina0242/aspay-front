@@ -1,0 +1,115 @@
+.regusr-content-container {
+  padding: 24px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.regusr-title {
+  text-align: center;
+  font-size: 2em;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+.regusr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.regusr-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.regusr-form label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+
+.regusr-form input[type="text"],
+.regusr-form input[type="email"],
+.regusr-form input[type="password"],
+.regusr-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+.regusr-form button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.regusr-form button:hover {
+  background-color: #357bd8;
+}
+
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.success-message {
+  color: #38a169;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+/* your-custom-styles.css */
+.form-select {
+  background-color: #f0f8ff; /* Light blue background */
+
+  color: #333; /* Darker text color */
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+}
+
+.form-select:focus {
+
+  box-shadow: 0 0 0 0.25rem rgba(198, 217, 238, 0.25);
+}
+
+/* Styling for options within the select dropdown (limited browser support) */
+.form-select option {
+  background-color: #fff;
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 20px; /* espacio entre elementos */
+  align-items: center;
+}
+
+/* Asegura que cada label+input quede en bloque */
+.form-grid label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
