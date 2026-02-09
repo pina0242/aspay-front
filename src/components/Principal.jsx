@@ -113,6 +113,19 @@ const DROPDOWN_CONFIG = {
         }
 
     ],
+    SERVICIOS: [
+            { 
+                label: 'Servicios Especiales', 
+                submenuItems: [
+                    { 
+                        label: 'Panel de Calificación', 
+                        path: '/calificacionPanel',
+                        description: 'Evaluación completa de riesgos PEP, actividad económica, cuentas y scoring crediticio'
+                    },
+                ]
+            },
+        ],
+
 };
 
 export const Principal = () => {
@@ -273,6 +286,7 @@ export const Principal = () => {
                         {renderDropdown('AGREGADORA', 'Agregadora')}
                         {renderDropdown('CONFIG', 'Config')}
                         {renderDropdown('CONTROL', 'Control')}
+                        {renderDropdown('SERVICIOS', 'Servicios')}
 
                     </div>
                     <div className="depth-4-frame-12">

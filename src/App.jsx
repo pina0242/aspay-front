@@ -26,6 +26,7 @@ import { Deldoc } from './components/Deldoc';
 import { Regkyc } from './components/Regkyc';
 import { Listkyc } from './components/Listkyc';
 import { Delkyc } from './components/Delkyc';
+import { CalificacionPanel } from './components/CalificacionPanel'
 
 
 import { AuthHandler } from './components/AuthHandler';
@@ -122,7 +123,9 @@ function App() {
         <Route path="/Deldoc" element={<Deldoc />} />  
         <Route path="/Regkyc" element={<Regkyc />} />             
         <Route path="/Listkyc" element={<Listkyc />} />          
-        <Route path="/Delkyc" element={<Delkyc />} />      
+        <Route path="/Delkyc" element={<Delkyc />} /> 
+        <Route path="/calificacionPanel" element={<CalificacionPanel/>} />
+             
 
      
         
