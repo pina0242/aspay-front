@@ -10,6 +10,7 @@ const DROPDOWN_CONFIG = {
         { label: 'Files', path: '/Files' },
         { label: 'Consulta Pendientes', path: '/Listsing' },
         { label: 'Consulta Procesados', path: '/Listproc' },
+        { label: 'Traspaso', path: '/RegTrasp' }
     ],
     // ESTRUCTURA DE SUBMENÚS ANIDADA EN 'PERSONAS'
     PERSONAS: [

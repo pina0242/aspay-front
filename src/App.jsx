@@ -69,6 +69,7 @@ import { Ejecarch } from './components/Ejecarch';
 import { Listproc } from './components/Listproc';
 import { Listpdet } from './components/Listpdet';
 import { Selproej } from './components/Selproej';
+import { RegTrasp } from './components/RegTrasp';
 
 import { Delfinal } from './components/Delfinal';
 import { Realeject } from './components/Realeject';
@@ -171,6 +172,7 @@ function App() {
         <Route path="/Selproej" element={<Selproej />} />
         <Route path="/Delfinal" element={<Delfinal />} />
         <Route path="/Realeject" element={<Realeject />} />
+        <Route path="/RegTrasp" element={<RegTrasp />} />
         <Route path="/Registotp" element={<Registotp />} />
         <Route path="/Listustran" element={<Listustran />} />
         <Route path="/Regcosto" element={<Regcosto />} />
