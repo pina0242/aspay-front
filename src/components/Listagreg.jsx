@@ -6,6 +6,8 @@ import '../styles/principal.css';
 import '../styles/listusr.css'; 
 import '../styles/Movimientos.css'; 
 import { FaRegMoneyBillAlt, FaSpinner } from 'react-icons/fa'; 
+import { SlArrowLeftCircle } from 'react-icons/sl';
+
 import {
   AreaChart,
   Area,
@@ -14,6 +16,7 @@ import {
   Tooltip,
   ResponsiveContainer
 } from "recharts";
+import { CgEnter } from 'react-icons/cg';
 
 
 const encryptionPassword = import.meta.env.VITE_ENCRYPTION_PASSWORD;
@@ -343,18 +346,19 @@ export const Listagreg = () => {
   <div className="modal-overlay">
     <div className="modal-content">
 
-      <div className="modal-header">
-        <h2>Movimientos</h2>
+      <div className="modal-header" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <h2 style={{ margin: 0 }}>Movimientos</h2>
+        
         <button 
-          className="modal-close"
+          className="delete-btn" 
+          style={{ position: 'absolute', right: '10px' }} 
           onClick={() => {
             setShowMovimientosModal(false);
             setItemToDisplaySaldo(null);
             setMovimientosData([]);
-
           }}
         >
-          salir
+          <SlArrowLeftCircle />
         </button>
       </div>
 
