@@ -267,7 +267,7 @@ console.log("Enviando categoría seleccionada:", categoria)
 
             <div className="form-group">
               <label htmlFor="nivel">Ind Cuenta Operativa</label>
-              <input type="text" id="indoper" value={indoper} onChange={(e) => setIndoper(e.target.value)} maxLength="1" required />
+              <input type="text" id="indoper" value={indoper} onChange={(e) => setIndoper(e.target.value)} maxLength="2" required />
             </div>  
 
             <div className="form-group">

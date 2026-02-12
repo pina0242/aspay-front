@@ -245,8 +245,8 @@ const handleDecryptedCategorias = (data) => {
             <label htmlFor="nivel">Ind Cta Operativa</label>
             <select className="form-select" aria-label="Default select example"value={indoper} onChange={(e) => setIndoper(e.target.value)}required >
               <option value="">Seleccione</option>
-              <option value="S">Si es operativa</option>
-              <option value="N">No es operativa</option>
+              <option value="CO">Operativa</option>
+              <option value="NO">No Operativa</option>
             </select>        
             {/* <label htmlFor="nivel">Categoria</label>
             <input type="text" id="categoria" value={categoria} onChange={(e) => setCategoria(e.target.value)} maxLength="20" required />   */}
