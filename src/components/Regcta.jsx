@@ -247,6 +247,7 @@ const handleDecryptedCategorias = (data) => {
               <option value="">Seleccione</option>
               <option value="CO">Operativa</option>
               <option value="NO">No Operativa</option>
+              <option value="CS">Salvaguarda</option>
             </select>        
             {/* <label htmlFor="nivel">Categoria</label>
             <input type="text" id="categoria" value={categoria} onChange={(e) => setCategoria(e.target.value)} maxLength="20" required />   */}
