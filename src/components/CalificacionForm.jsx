@@ -191,7 +191,7 @@ export const CalificacionForm = ({ formData, selectedEndpoints, onChange, onSubm
                     <h3 className="section-title-option3">Opción 4: Calificación de Cuenta</h3>
                     <div className="form-row">
                         <div className="form-group">
-                            <label htmlFor="tkncli">Token Cliente *</label>
+                            <label htmlFor="tkncli">Cuenta Cliente *</label>
                             <input
                                 type="text"
                                 id="tkncli"
@@ -227,7 +227,7 @@ export const CalificacionForm = ({ formData, selectedEndpoints, onChange, onSubm
                     <h3 className="section-title-option3">Opción 5: Scoring de crédito</h3>
                     <div className="form-row">
                         <div className="form-group">
-                            <label htmlFor="tkncli">Token Cliente *</label>
+                            <label htmlFor="tkncli">Cuenta Cliente *</label>
                             <input
                                 type="text"
                                 id="tkncli"

@@ -102,7 +102,7 @@ export const CalificacionPanel = () => {
         }
 
         if (selectedEndpoints.includes(4)) {
-            if (!formData.tkncli || formData.tkncli.length !== 36) {
+            if (!formData.tkncli || formData.tkncli.length > 36) {
                 errors.push('Para Opción 4: tkncli debe tener exactamente 36 caracteres');
             }
             if (!formData.alias2 || formData.alias2.length > 10) {
@@ -111,7 +111,7 @@ export const CalificacionPanel = () => {
         }
 
         if (selectedEndpoints.includes(5)) {
-            if (!formData.tkncli || formData.tkncli.length !== 36) {
+            if (!formData.tkncli || formData.tkncli.length > 36) {
                 errors.push('Para Opción 5: tkncli debe tener exactamente 36 caracteres');
             }
             if (!formData.alias2 || formData.alias2.length > 10) {
