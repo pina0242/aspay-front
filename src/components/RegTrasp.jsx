@@ -26,21 +26,18 @@ export const RegTrasp = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    // Estados para Seguridad y Flujo
     const [fetchEncrypting, setFetchEncrypting] = useState(false);
     const [fetchDecrypting, setFetchDecrypting] = useState(null);
     const [execEncrypting, setExecEncrypting] = useState(false);
     const [execDecrypting, setExecDecrypting] = useState(null);
 
-    // Validación de sesión inicial
     useEffect(() => {
         if (!token) {
-            setError("Token de autenticación no encontrado. Por favor, inicie sesión nuevamente.");
+            setError("Token de autenticación no encontrado. Redirigiendo...");
             navigate('/login');
         }
     }, [token, navigate]);
 
-    // --- CARGA DE CUENTAS ---
     const handleEntidadBlur = () => {
         if (formData.entidad.trim().length > 0) {
             setError('');
@@ -57,20 +54,17 @@ export const RegTrasp = () => {
                 headers: { 'Content-Type': 'application/json', 'Authorization': token },
                 body: JSON.stringify(encryptedBody)
             });
-
             const data = await response.json();
-
             if (response.status === 200 || response.status === 201) {
                 setFetchDecrypting(data);
             } else if (response.status === 401) {
-                setError(data[0]?.response || 'Sesión expirada.');
-                setTimeout(() => navigate('/login'), 2000);
+                navigate('/login');
             } else {
                 setCuentas([]);
                 setError(data[0]?.response || "Error al cargar cuentas.");
             }
         } catch (err) {
-            setError("Error de comunicación con el servidor.");
+            setError("Error de comunicación");
         }
     };
 
@@ -80,7 +74,6 @@ export const RegTrasp = () => {
         setFetchDecrypting(null);
     };
 
-    // --- SELECCIÓN DE CUENTAS ---
     const handleSelectCuenta = (e, tipo) => {
         const val = e.target.value;
         const cuentaEncontrada = cuentas.find(c => c.datos === val);
@@ -92,7 +85,6 @@ export const RegTrasp = () => {
         }));
     };
 
-    // --- EJECUCIÓN DE TRASPASO ---
     const handleSubmit = (e) => {
         e.preventDefault();
         if (formData.cta_ori === formData.cta_des) {
@@ -113,22 +105,14 @@ export const RegTrasp = () => {
                 headers: { 'Content-Type': 'application/json', 'Authorization': token },
                 body: JSON.stringify(encryptedBody)
             });
-            
             const data = await response.json();
-
             if (response.ok) {
-                // ÉXITO: Se procede a desencriptar para obtener el JSON {"response":"Exito"}
                 setExecDecrypting(data);
-            } else if (response.status === 401) {
-                // TOKEN EXPIRADO
-                setLoading(false);
-                setError(data[0]?.response || 'Su sesión ha caducado.');
-                navigate('/login');
             } else {
-                // ERROR DE NEGOCIO: Se recupera el valor sin desencriptar
                 setLoading(false);
                 const errorMsg = Array.isArray(data) ? data[0]?.response : data.response;
                 setError(errorMsg || 'Error en la transacción.');
+                if (response.status === 401) navigate('/login');
             }
         } catch (err) {
             setError("Error de servidor");
@@ -138,9 +122,7 @@ export const RegTrasp = () => {
 
     const handleTraspasoDecrypted = (decryptedData) => {
         const parsed = JSON.parse(decryptedData);
-        // Maneja si la respuesta viene como array [0] o como objeto directo
         const message = Array.isArray(parsed) ? parsed[0]?.response : parsed.response;
-
         if (message === "Exito") {
             setSuccess("¡Exito!: Traspaso realizado correctamente.");
             setFormData(prev => ({ 
@@ -148,7 +130,7 @@ export const RegTrasp = () => {
                 alias_ori: '', tipo_ori: '', alias_des: '', tipo_des: '' 
             }));
         } else {
-            setError(message || "Respuesta fallida del servidor.");
+            setError(message || "Respuesta fallida");
         }
         setLoading(false);
         setExecDecrypting(null);
@@ -156,21 +138,12 @@ export const RegTrasp = () => {
 
     return (
         <div className="main-container">
-            {/* ENCABEZADO DE NAVEGACIÓN (Consistencia con Listsing) */}
             <div className="depth-2-frame-0">
-                <div className="depth-3-frame-0">
-                    <div className="depth-4-frame-1">
-                        <div className="acme-co">ASPAY</div>
-                    </div>
-                </div>
+                <div className="depth-3-frame-0"><div className="depth-4-frame-1"><div className="acme-co">ASPAY</div></div></div>
                 <div className="depth-3-frame-1">
                     <div className="depth-4-frame-02">
-                        <div className="depth-5-frame-02" style={{ cursor: 'pointer' }} onClick={() => navigate(-1)}>
-                            <div className="product">Regresar</div>
-                        </div>
-                        <div className="depth-5-frame-02" style={{ cursor: 'pointer' }} onClick={() => navigate('/Principal', { state: { token } })}>
-                            <div className="product">Inicio</div>
-                        </div>
+                        <div className="depth-5-frame-02" style={{ cursor: 'pointer' }} onClick={() => navigate(-1)}><div className="product">Regresar</div></div>
+                        <div className="depth-5-frame-02" style={{ cursor: 'pointer' }} onClick={() => navigate('/Principal', { state: { token } })}><div className="product">Inicio</div></div>
                     </div>
                 </div>
             </div>
@@ -178,16 +151,39 @@ export const RegTrasp = () => {
             <div className="listusr-content-container">
                 <h2 className="listusr-title">Registro de Traspaso</h2>
                 
-                <div className="form-group" style={{ marginBottom: '20px' }}>
-                    <label>Entidad:</label>
-                    <input 
-                        type="text" 
-                        className="form-control"
-                        placeholder="Ingrese Entidad y presione fuera"
-                        value={formData.entidad} 
-                        onChange={(e) => setFormData({...formData, entidad: e.target.value})}
-                        onBlur={handleEntidadBlur}
-                    />
+                {/* FILA SUPERIOR: Entidad, Importe y Concepto alineados */}
+                <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', alignItems: 'flex-end' }}>
+                    <div className="form-group" style={{ flex: 1 }}>
+                        <label>Entidad:</label>
+                        <input 
+                            type="text" 
+                            className="form-control"
+                            placeholder="Entidad"
+                            value={formData.entidad} 
+                            onChange={(e) => setFormData({...formData, entidad: e.target.value})}
+                            onBlur={handleEntidadBlur}
+                        />
+                    </div>
+                    <div className="form-group" style={{ flex: 1 }}>
+                        <label>Importe:</label>
+                        <input 
+                            type="number" step="0.01" 
+                            className="form-control"
+                            value={formData.importe} 
+                            onChange={(e) => setFormData({...formData, importe: parseFloat(e.target.value)})} 
+                            required 
+                        />
+                    </div>
+                    <div className="form-group" style={{ flex: 2 }}>
+                        <label>Concepto:</label>
+                        <input 
+                            type="text" 
+                            className="form-control"
+                            value={formData.concepto} 
+                            onChange={(e) => setFormData({...formData, concepto: e.target.value})} 
+                            required 
+                        />
+                    </div>
                 </div>
 
                 {error && <div className="error-message" style={{ color: 'red', backgroundColor: '#ffe6e6', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>{error}</div>}
@@ -195,90 +191,58 @@ export const RegTrasp = () => {
 
                 <form className="listusr-form" onSubmit={handleSubmit}>
                     <div style={{ display: 'flex', gap: '30px', marginBottom: '20px' }}>
-                        {/* ORIGEN */}
-                        <div style={{ flex: 1, padding: '15px', border: '1px solid #ddd', borderRadius: '8px' }}>
-                            <h3 style={{ fontSize: '1.1em', borderBottom: '1px solid #eee', marginBottom: '10px' }}>Origen</h3>
+                        {/* TARJETA ORIGEN */}
+                        <div style={{ flex: 1, padding: '15px', border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+                            <h3 style={{ fontSize: '1.1em', borderBottom: '1px solid #eee', marginBottom: '10px', color: '#333' }}>Origen</h3>
                             <label>Cuenta:</label>
                             <select 
                                 value={formData.cta_ori} 
                                 onChange={(e) => handleSelectCuenta(e, 'ori')} 
                                 required 
                                 disabled={cuentas.length === 0}
-                                style={{ width: '100%', padding: '8px' }}
+                                style={{ width: '100%', padding: '8px', borderRadius: '4px' }}
                             >
                                 <option value="">Seleccione...</option>
                                 {cuentas.map(c => <option key={c.id} value={c.datos}>{c.alias} - {c.datos}</option>)}
                             </select>
-                            <div style={{ marginTop: '10px' }}>
+                            <div style={{ marginTop: '12px', fontSize: '0.9em' }}>
                                 <p><strong>Alias:</strong> {formData.alias_ori || '---'}</p>
                                 <p><strong>Tipo:</strong> {formData.tipo_ori || '---'}</p>
                             </div>
                         </div>
 
-                        {/* DESTINO */}
-                        <div style={{ flex: 1, padding: '15px', border: '1px solid #ddd', borderRadius: '8px' }}>
-                            <h3 style={{ fontSize: '1.1em', borderBottom: '1px solid #eee', marginBottom: '10px' }}>Destino</h3>
+                        {/* TARJETA DESTINO */}
+                        <div style={{ flex: 1, padding: '15px', border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+                            <h3 style={{ fontSize: '1.1em', borderBottom: '1px solid #eee', marginBottom: '10px', color: '#333' }}>Destino</h3>
                             <label>Cuenta:</label>
                             <select 
                                 value={formData.cta_des} 
                                 onChange={(e) => handleSelectCuenta(e, 'des')} 
                                 required 
                                 disabled={cuentas.length === 0}
-                                style={{ width: '100%', padding: '8px' }}
+                                style={{ width: '100%', padding: '8px', borderRadius: '4px' }}
                             >
                                 <option value="">Seleccione...</option>
                                 {cuentas.map(c => <option key={c.id} value={c.datos}>{c.alias} - {c.datos}</option>)}
                             </select>
-                            <div style={{ marginTop: '10px' }}>
+                            <div style={{ marginTop: '12px', fontSize: '0.9em' }}>
                                 <p><strong>Alias:</strong> {formData.alias_des || '---'}</p>
                                 <p><strong>Tipo:</strong> {formData.tipo_des || '---'}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="form-group">
-                        <label>Importe:</label>
-                        <input 
-                            type="number" step="0.01" 
-                            value={formData.importe} 
-                            onChange={(e) => setFormData({...formData, importe: parseFloat(e.target.value)})} 
-                            required 
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label>Concepto:</label>
-                        <input 
-                            type="text" 
-                            value={formData.concepto} 
-                            onChange={(e) => setFormData({...formData, concepto: e.target.value})} 
-                            required 
-                        />
-                    </div>
-
-                    <button type="submit" className="submit-button" disabled={loading || cuentas.length === 0}>
+                    <button type="submit" className="submit-button" disabled={loading || cuentas.length === 0} style={{ width: '100%', padding: '12px', fontWeight: 'bold' }}>
                         {loading ? 'Procesando...' : 'Realizar Traspaso'}
                     </button>
                 </form>
             </div>
 
-            {/* COMPONENTES DE SEGURIDAD */}
-            {fetchEncrypting && (
-                <Encryptor password={encryptionPassword} message={JSON.stringify({entidad: formData.entidad})}
-                    onEncrypted={handleCuentasEncrypted} onError={setError} />
-            )}
-            {fetchDecrypting && (
-                <Decryptor encryptedMessage={fetchDecrypting} password={encryptionPassword}
-                    onDecrypted={handleCuentasDecrypted} onError={setError} />
-            )}
-            {execEncrypting && (
-                <Encryptor password={encryptionPassword} message={JSON.stringify(formData)}
-                    onEncrypted={handleTraspasoEncrypted} onError={setError} />
-            )}
-            {execDecrypting && (
-                <Decryptor encryptedMessage={execDecrypting} password={encryptionPassword}
-                    onDecrypted={handleTraspasoDecrypted} onError={setError} />
-            )}
+            {/* MODULOS DE ENCRIPTACIÓN */}
+            {fetchEncrypting && <Encryptor password={encryptionPassword} message={JSON.stringify({entidad: formData.entidad})} onEncrypted={handleCuentasEncrypted} onError={setError} />}
+            {fetchDecrypting && <Decryptor encryptedMessage={fetchDecrypting} password={encryptionPassword} onDecrypted={handleCuentasDecrypted} onError={setError} />}
+            {execEncrypting && <Encryptor password={encryptionPassword} message={JSON.stringify(formData)} onEncrypted={handleTraspasoEncrypted} onError={setError} />}
+            {execDecrypting && <Decryptor encryptedMessage={execDecrypting} password={encryptionPassword} onDecrypted={handleTraspasoDecrypted} onError={setError} />}
         </div>
     );
 };
