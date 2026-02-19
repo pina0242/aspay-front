@@ -99,6 +99,12 @@ const DROPDOWN_CONFIG = {
             ]
         },
         { 
+            label: 'Gestion de Rules', 
+            submenuItems: [
+                { label: 'Rules', path: '/Listrules' },
+            ]
+        },
+        { 
             label: 'Costos x Tipo Transaccion', 
             submenuItems: [
                 { label: 'Registrar Costo', path: '/Regcosto' },

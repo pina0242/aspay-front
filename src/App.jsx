@@ -34,6 +34,7 @@ import { UnregisteredUser } from './components/UnregisteredUser';
 import { ValOtp } from './components/ValOtp';
 import { Lisauts } from './components/Lisauts';
 import { Listusrauts } from './components/Listusrauts';
+
 import { Regusraut } from './components/Regusraut';
 import { Updusraut } from './components/Updusraut';
 import { Delusraut } from './components/Delusraut';
@@ -133,6 +134,7 @@ function App() {
         <Route path="/valotp" element={<ValOtp />} />
         <Route path="/Lisauts" element={<Lisauts />} />
         <Route path="/Listusrauts" element={<Listusrauts />} />
+        
         <Route path="/Regusraut" element={<Regusraut />} />
         <Route path="/Updusraut" element={<Updusraut />} />
         <Route path="/Delusraut" element={<Delusraut />} />
