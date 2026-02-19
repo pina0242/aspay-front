@@ -84,6 +84,12 @@ import { Delcosto } from './components/Delcosto';
 
 import { Listmon } from './components/Listmon';
 import { Listent } from './components/Listent';
+import { ListSchEnt } from './components/ListSchEnt';
+import { RegSched } from './components/RegSched';
+import { ListSched } from './components/ListSched';
+import { UpdSched } from './components/UpdSched';
+import { DelSched } from './components/DelSched';
+
 
 import { Regcateg } from './components/Regcateg';
 import { Listcateg } from './components/Listcateg';
@@ -190,6 +196,11 @@ function App() {
 
         <Route path="/Listmon" element={<Listmon />} />
         <Route path="/Listent" element={<Listent />} />
+        <Route path="/ListSchEnt" element={<ListSchEnt />} />
+        <Route path="/RegSched" element={<RegSched />} />
+        <Route path="/ListSched" element={<ListSched />} />
+        <Route path="/UpdSched" element={<UpdSched />} />
+        <Route path="/DelSched" element={<DelSched />} />
 
         <Route path="/Regcateg" element={<Regcateg/>} />
         <Route path="/Listcateg" element={<Listcateg/>} />

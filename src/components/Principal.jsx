@@ -117,6 +117,13 @@ const DROPDOWN_CONFIG = {
             submenuItems: [
                 { label: 'MOnitoreo', path: '/Listmon' },
             ]
+        },
+
+        { 
+            label: 'Scheduler', 
+            submenuItems: [
+                { label: 'Listar Scheduler', path: '/ListSchEnt' },
+            ]
         }
 
     ],
