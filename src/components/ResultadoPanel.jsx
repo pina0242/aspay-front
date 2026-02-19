@@ -140,9 +140,9 @@ export const ResultadoPanel = ({ results, error, selectedEndpoints, formData }) 
             tx_alto_valor: txAltoValorNum,       // Ahora es Number
             tx_sospechosas: txSospechosasNum,     // Ahora es Number
             riesgo_movs: riesgoMovsMapped,
-            razon_riesgo_movs: safeGet(endpoint4Data, 'razon4', 'NO ESPECIFICADO'),
+            razon_riesgo_movs: safeGet(endpoint4Data, 'razon4') || safeGet(endpoint4Data, 'razon4') || 'NO ESPECIFICADO',
             score_crediticio: scoreCrediticioValue,
-            razon_score_cred: safeGet(endpoint5Data, 'razon5', 'NO ESPECIFICADO'),
+            razon_score_cred: safeGet(endpoint5Data, 'razon5') || safeGet(endpoint5Data, 'razon5') || 'NO ESPECIFICADO',
             cuota_max_sugerida: cuotaMaxNum      // Ahora es Float
         };
     };
@@ -257,14 +257,14 @@ export const ResultadoPanel = ({ results, error, selectedEndpoints, formData }) 
                     </div>
                     <div className="result-item">
                         <span className="result-label">Listas de Riesgo:</span>
-                        <span className={`result-value indicator ${indListas === 'S' ? 'positive' : 'negative'}`}>
-                            {indListas === 'S' ? 'SÍ' : 'NO'}
+                        <span className={`result-value indicator ${indListas === 'B' ? 'positive' : 'negative'}`}>
+                            {indListas === 'B' ? 'SÍ' : 'NO'}
                         </span>
                     </div>
                     <div className="result-item">
                         <span className="result-label">Medios Adversos:</span>
-                        <span className={`result-value indicator ${indMedios === 'S' ? 'positive' : 'negative'}`}>
-                            {indMedios === 'S' ? 'SÍ' : 'NO'}
+                        <span className={`result-value indicator ${indMedios === 'B' ? 'positive' : 'negative'}`}>
+                            {indMedios === 'B' ? 'SÍ' : 'NO'}
                         </span>
                     </div>
                     <div className="result-item full-width">

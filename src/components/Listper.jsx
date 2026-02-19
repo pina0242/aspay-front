@@ -14,6 +14,7 @@ export const Listper = () => {
   const token = location.state?.token || localStorage.getItem('userToken');
 
   const [idpersona, setIdpersona] = useState('');
+  const [entidad, setEntidad] = useState('');
   const [numid, setNumid] = useState('');
   const [nombre, setNombre] = useState('');
   const [appaterno, setAppaterno] = useState('');
@@ -47,6 +48,7 @@ export const Listper = () => {
     setPerList([]);
 
     const payload = {
+      entidad:entidad,
       num_id:numid,
       id_persona: idpersona,
       nombre:nombre,
@@ -152,6 +154,10 @@ export const Listper = () => {
       <div className="listusr-content-container">
         <h1 className="listusr-title">Lista de Personas</h1>
         <form className="listusr-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="startDate">Entidad</label>
+            <input type="number" id="entidad" value={entidad} onChange={(e) => setEntidad(e.target.value)} />
+          </div>
           <div className="form-group">
             <label htmlFor="startDate">Numero de ID</label>
             <input type="number" id="numid" value={numid} onChange={(e) => setNumid(e.target.value)} />

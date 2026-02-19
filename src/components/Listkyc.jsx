@@ -162,22 +162,20 @@ export const Listkyc = () => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Edad</th>
+                <th>Entidad</th>
                 <th>Riesgo Geog</th>
-                <th>Riesgo Edad</th>
                 <th>Riesgo Activ Econ</th>
-                <th>Riesgo Total</th>
-                <th>Puntuacion Fico</th> 
-                <th>Calif Fico</th> 
-                <th>Num Tx Frecuentes</th> 
-                <th>Num Tx Mismo Impte</th> 
-                <th>Num Tx Benef Sospechosos</th> 
+                <th>Ind PEP</th>
+                <th>Riesgo Lista Sanciones</th> 
+                <th>Riesgo Medios Adversos</th> 
+                <th>Resumen Analisis</th> 
                 <th>Num Tx Alto Valor</th> 
-                <th>Num Tx Paises AR</th> 
-                <th>Num Tx con Estruc</th> 
                 <th>Num Tx Sospechosas</th> 
-                <th>Resultado KYC</th>                                                                                                 
-                <th>Razon Resultado</th>                                                                 
+                <th>Aprobación x Movs Cta</th> 
+                <th>Razon Riesgo x Movs</th> 
+                <th>Score Crediticio</th> 
+                <th>Razon Score</th> 
+                <th>Cuota Max. Sugerida</th>                                                                                                 
                 <th>Fecha Calif</th> 
                 <th>Usuario de Calif</th> 
                 <th>Acciones</th>                               
@@ -187,22 +185,20 @@ export const Listkyc = () => {
               {perList.map((item, index) => (
                 <tr key={index}>
                   <td>{item.num_id}</td>
-                  <td>{item.edad}</td>
+                  <td>{item.entidad}</td>
                   <td>{item.riesgo_geog}</td>
-                  <td>{item.riesgo_edad}</td>
                   <td>{item.riesgo_act_econ}</td>
-                  <td>{item.riesgo_total}</td>
-                  <td>{item.puntuac_fico}</td>
-                  <td>{item.calif_fico}</td>
-                  <td>{item.tx_frecuentes}</td>
-                  <td>{item.tx_mismo_impte}</td>
-                  <td>{item.tx_benef_sospech}</td>
+                  <td>{item.riesgo_pep}</td>
+                  <td>{item.riesgo_list_sanc}</td>
+                  <td>{item.riesgo_med_adv}</td>
+                  <td>{item.resumen_analisis}</td>
                   <td>{item.tx_alto_valor}</td>
-                  <td>{item.tx_paises_altrzgo}</td>
-                  <td>{item.tx_con_estruct}</td>
                   <td>{item.tx_sospechosas}</td>
-                  <td>{item.aprob_kyc}</td>
-                  <td>{item.razon_aprob}</td>
+                  <td>{item.riesgo_movs}</td>
+                  <td>{item.razon_riesgo_movs}</td>
+                  <td>{item.score_crediticio}</td>
+                  <td>{item.razon_score_cred}</td>
+                  <td>{item.cuota_max_sugerida}</td>
                   <td>{item.fecha_alta}</td>
                   <td>{item.usuario_alta}</td>
 
