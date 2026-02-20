@@ -31,6 +31,8 @@ export const Updcta = () => {
   const [listaCategorias, setListaCategorias] = useState([]); 
   const [datosCategoriasCifrados, setDatosCategoriasCifrados] = useState(null);
   const [cargandoCategorias, setCargandoCategorias] = useState(false);
+  const [editingIndoper, setEditingIndoper] = useState(false);
+  const [originalIndoper, setOriginalIndoper] = useState('');
 
   useEffect(() => {
     if (!token) {
@@ -94,6 +96,7 @@ export const Updcta = () => {
       setAlias(userToEdit.alias || '');
       setDatos(userToEdit.datos || '');
       setIndoper(userToEdit.indoper || '');  
+      setOriginalIndoper(userToEdit.indoper || '');  
       setCategoria(userToEdit.categoria || '');  
 
     }
@@ -213,7 +216,7 @@ console.log("Enviando categoría seleccionada:", categoria)
         </div>
         <div className="depth-3-frame-1">
           <div className="depth-4-frame-02">
-            <div className="depth-5-frame-02" style={{ cursor: 'pointer' }} onClick={() => navigate(-1)}>
+            <div className="depth-5-frame-02" onClick={() => navigate(-1)}>
               <div className="product">Regresar</div>
             </div>
           </div>
@@ -267,8 +270,34 @@ console.log("Enviando categoría seleccionada:", categoria)
 
             <div className="form-group">
               <label htmlFor="nivel">Ind Cuenta Operativa</label>
-              <input type="text" id="indoper" value={indoper} onChange={(e) => setIndoper(e.target.value)} maxLength="2" required />
-            </div>  
+              {!editingIndoper ? (
+                <input
+                  type="text"
+                  id="indoper"
+                  className="form-input"
+                  value={indoper ? indoper.substring(0, 2) : ''}
+                  readOnly
+                  onFocus={() => setEditingIndoper(true)}
+                  onClick={() => setEditingIndoper(true)}
+                  maxLength="2"
+                  required
+                />
+              ) : (
+                <select
+                  id="indoper"
+                  className="form-select"
+                  value={indoper || ''}
+                  onChange={(e) => { setIndoper(e.target.value); setEditingIndoper(false); }}
+                  required
+                >
+                  <option value="">Seleccione</option>
+                  <option value="CO">Operativa</option>
+                  <option value="NO">No Operativa</option>
+                  <option value="CS">Salvaguarda</option>
+                  <option value="IN">Interna</option>
+                </select>
+              )}
+            </div>
 
             <div className="form-group">
               {/* <label htmlFor="nivel">Categoria</label>
